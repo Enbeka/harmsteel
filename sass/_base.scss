@@ -1,0 +1,50 @@
+// font-family: 'Roboto', sans-serif;
+
+//Logo colors
+// #1701be
+// #424293
+// #02579b
+// #008cff
+$gradient-color: linear-gradient(to right, #1701be, #424293, #02579b, #008cff);
+
+// media breakpoints
+$bp-large: 87.5em;  // 1400px
+$bp-medium: 62.5em;  // 1000px
+$bp-small: 50em;  // 800px
+$bp-smallest: 37.5em; //600px
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+    @media (max-width: $bp-large){
+        font-size: 50%;
+    }
+
+    @media (max-width: $bp-medium){
+        font-size: 43.75%;
+    }
+
+    @media (max-width: $bp-small){
+        font-size: 37.5%;
+    }
+} 
+
+body{
+    padding: 3rem;
+
+    @media (max-width: $bp-medium){
+        padding: 0;
+    }
+}

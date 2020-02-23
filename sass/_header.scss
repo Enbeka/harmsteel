@@ -1,0 +1,98 @@
+.header{
+    width: 100%;
+    height: 95vh;
+    background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(../img/header1.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+    z-index: 2;
+    transition: .5s;
+
+    @media (max-width: $bp-smallest){
+        background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(../img/header1-small.jpg);
+        background-position: left;
+    }
+
+    &__heading{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        transform: translateY(-70%);
+        color: #fff;
+        padding: 0 3rem;
+        font-weight: 100;
+        font-size: 7rem;
+        letter-spacing: .5rem;
+
+        @media (max-width: $bp-smallest){
+            font-size: 6rem;
+            letter-spacing: .3rem;
+        }
+    }
+
+    &__bar{
+        position: absolute;
+        top:0;
+        left: 0;
+        min-height: 5rem;
+        display: flex;
+        margin: 4rem 5rem;
+        align-items: center;
+
+        @media (max-width: $bp-smallest){
+            margin: 3rem 0;
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+
+    &__bar-logo{
+        height: 5rem;
+        margin-right: 5rem;
+
+        @media (max-width: $bp-smallest){
+            margin-right: 0;
+        }
+
+
+        &-img{
+            height: 100%;
+        }
+    }
+
+    &__bar-list{
+        list-style: none;
+        display: flex;
+
+        @media (max-width: $bp-smallest){
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__bar-list-item{
+        color: #fff;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 100;
+        position: relative;
+        padding: .5rem 1rem;
+        margin: 0 1.5rem;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 2px;
+            background-image: $gradient-color;
+        }
+    }
+}
