@@ -24,6 +24,8 @@
         position: relative;
         padding: .5rem 1rem;
         margin: 0 1.5rem;
+        text-decoration: none;
+        color: #fff;
 
         &::after{
             content: '';
