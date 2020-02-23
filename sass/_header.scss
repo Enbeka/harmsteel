@@ -26,6 +26,8 @@
         font-weight: 100;
         font-size: 7rem;
         letter-spacing: .5rem;
+        transition: 1.5s;
+        opacity: 0;
 
         @media (max-width: $bp-smallest){
             font-size: 6rem;
@@ -80,8 +82,10 @@
         font-size: 2rem;
         font-weight: 100;
         position: relative;
-        padding: .5rem 1rem;
+        padding: 0 1rem .5rem;
         margin: 0 1.5rem;
+        opacity: 0;
+        transition: 2s;
 
         &::after{
             content: '';

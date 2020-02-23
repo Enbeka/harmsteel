@@ -35,6 +35,8 @@
 
     &__item{
         flex: 0 0 45%;
+        opacity: 0;
+        transition: 1s;
 
         &:not(:last-child){
             margin-bottom: 9rem;
