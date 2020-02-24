@@ -34,26 +34,21 @@ window.addEventListener("scroll", function() {
 
 //scroll from nav to element
 
-const weldingFromTop = document.querySelector(".about__heading--welding")
-	.offsetTop;
-const constructionsFromTop = document.querySelector(
-	".about__heading--constructions"
-).offsetTop;
-const machiningFromTop = document.querySelector(".about__heading--machining")
-	.offsetTop;
-
 document
 	.querySelector(".header__bar-list-item--welding")
 	.addEventListener("click", function() {
+		let weldingFromTop = document.querySelector(".about__heading--welding").offsetTop;
 		window.scrollTo(0, weldingFromTop);
 	});
 document
 	.querySelector(".header__bar-list-item--constructions")
 	.addEventListener("click", function() {
+		let constructionsFromTop = document.querySelector(".about__heading--constructions").offsetTop;
 		window.scrollTo(0, constructionsFromTop);
 	});
 document
 	.querySelector(".header__bar-list-item--machining")
 	.addEventListener("click", function() {
+		let machiningFromTop = document.querySelector(".about__heading--machining").offsetTop;
 		window.scrollTo(0, machiningFromTop);
 	});
