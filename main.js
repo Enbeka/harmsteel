@@ -23,9 +23,7 @@ const aboutItems = document.querySelectorAll(".about__item");
 window.addEventListener("scroll", function() {
 	aboutItems.forEach(item => {
 		const itemFromTop = item.offsetTop;
-		// console.log(itemFromTop);
 		const heightFromTop = window.pageYOffset;
-		// console.log(heightFromTop);
 		if (heightFromTop > itemFromTop) {
 			item.style.opacity = "1";
 		}
@@ -34,21 +32,15 @@ window.addEventListener("scroll", function() {
 
 //scroll from nav to element
 
-document
-	.querySelector(".header__bar-list-item--welding")
-	.addEventListener("click", function() {
-		let weldingFromTop = document.querySelector(".about__heading--welding").offsetTop;
-		window.scrollTo(0, weldingFromTop);
+document.querySelector(".header__bar-list-item--welding").addEventListener("click", function() {
+        let weldingFromTop = document.querySelector(".about__heading--welding").offsetTop;
+		window.scrollTo(0, weldingFromTop + 150);
 	});
-document
-	.querySelector(".header__bar-list-item--constructions")
-	.addEventListener("click", function() {
+document.querySelector(".header__bar-list-item--constructions").addEventListener("click", function() {
 		let constructionsFromTop = document.querySelector(".about__heading--constructions").offsetTop;
-		window.scrollTo(0, constructionsFromTop);
+		window.scrollTo(0, constructionsFromTop + 150);
 	});
-document
-	.querySelector(".header__bar-list-item--machining")
-	.addEventListener("click", function() {
+document.querySelector(".header__bar-list-item--machining").addEventListener("click", function() {
 		let machiningFromTop = document.querySelector(".about__heading--machining").offsetTop;
-		window.scrollTo(0, machiningFromTop);
+		window.scrollTo(0, machiningFromTop + 150);
 	});
