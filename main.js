@@ -22,12 +22,38 @@ const aboutItems = document.querySelectorAll(".about__item");
 
 window.addEventListener("scroll", function() {
 	aboutItems.forEach(item => {
-        const itemFromTop = item.offsetTop;
-        // console.log(itemFromTop);
-        const heightFromTop = window.pageYOffset;
-        // console.log(heightFromTop);
+		const itemFromTop = item.offsetTop;
+		// console.log(itemFromTop);
+		const heightFromTop = window.pageYOffset;
+		// console.log(heightFromTop);
 		if (heightFromTop > itemFromTop) {
 			item.style.opacity = "1";
 		}
 	});
 });
+
+//scroll from nav to element
+
+const weldingFromTop = document.querySelector(".about__heading--welding")
+	.offsetTop;
+const constructionsFromTop = document.querySelector(
+	".about__heading--constructions"
+).offsetTop;
+const machiningFromTop = document.querySelector(".about__heading--machining")
+	.offsetTop;
+
+document
+	.querySelector(".header__bar-list-item--welding")
+	.addEventListener("click", function() {
+		window.scrollTo(0, weldingFromTop);
+	});
+document
+	.querySelector(".header__bar-list-item--constructions")
+	.addEventListener("click", function() {
+		window.scrollTo(0, constructionsFromTop);
+	});
+document
+	.querySelector(".header__bar-list-item--machining")
+	.addEventListener("click", function() {
+		window.scrollTo(0, machiningFromTop);
+	});
