@@ -44,3 +44,5 @@ document.querySelector(".header__bar-list-item--machining").addEventListener("cl
 		let machiningFromTop = document.querySelector(".about__heading--machining").offsetTop;
 		window.scrollTo(0, machiningFromTop + 150);
 	});
+
+

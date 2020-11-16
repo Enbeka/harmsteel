@@ -35,7 +35,7 @@
 
     &__item{
         flex: 0 0 45%;
-        opacity: 0;
+        opacity: 1;
         transition: 2s;
 
         &:not(:last-child){
@@ -50,6 +50,10 @@
             margin: 0 auto;
         }
     }
+
+    @supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)) {
+        .about__item{opacity: 0;}
+      }
 
     &__img{
         display: block;
