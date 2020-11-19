@@ -1,10 +1,44 @@
 .form{
     max-width: 65rem;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: center;
+
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (max-width: $bp-medium){
+            flex-direction: column;
+        }
+
+        @media (max-width: $bp-small){
+            align-items: center;
+        }
+
+
+        &-col1{
+            display: flex;
+            flex: 0 0 45%;
+            flex-direction: column;
+        }
+
+        &-col2{
+            display: flex;
+            flex: 0 0 45%;
+            flex-direction: column;
+        }
+        
+        &-area{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+
+    }
 
     @media (max-width: $bp-small){
         flex-direction: column;
@@ -42,7 +76,7 @@
     }
 
     &__input{
-        flex: 0 0 40%;
+        width: 100%;
         font-family: FontAwesome, 'Montserrat', sans-serif;
         font-size: 2rem;
         margin-bottom: 3rem;
@@ -61,39 +95,29 @@
 
     
         &--text{
-            flex: 0 0 100%;
+            width: 100%;
         }
 
         @media (max-width: $bp-small){
             width: 80%;
+            align-self: center;
         }
     }
 
     &__label{
-        flex: 0 0 50%;
+        width: 100%;
         color: #fff;
         font-size: 2rem;
         font-weight: 100;
         border: 2px solid transparent;
 
-        &:nth-of-type(2){
-            padding-left: 2.5rem;
-
-            @media (max-width: $bp-large){
-                padding-left: 1.5rem;
-            }
-
-            @media (max-width: $bp-medium){
-                padding-left: .5rem;
-            }
-        }
-
+       
         @media (max-width: $bp-small){
             display: none;
         }
 
         &--text{
-            flex: 0 0 100%;
+            width: 100%;
         }
     }
 

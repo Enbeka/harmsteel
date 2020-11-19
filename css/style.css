@@ -140,11 +140,29 @@ body {
 
 .form {
   max-width: 65rem;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; }
+  margin: 0 auto; }
+  .form__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    @media (max-width: 62.5em) {
+      .form__wrap {
+        flex-direction: column; } }
+    @media (max-width: 50em) {
+      .form__wrap {
+        align-items: center; } }
+    .form__wrap-col1 {
+      display: flex;
+      flex: 0 0 45%;
+      flex-direction: column; }
+    .form__wrap-col2 {
+      display: flex;
+      flex: 0 0 45%;
+      flex-direction: column; }
+    .form__wrap-area {
+      display: flex;
+      width: 100%;
+      flex-direction: column; }
   @media (max-width: 50em) {
     .form {
       flex-direction: column; } }
@@ -170,7 +188,7 @@ body {
       .form__container {
         padding: 25vh 0 25rem; } }
   .form__input {
-    flex: 0 0 40%;
+    width: 100%;
     font-family: FontAwesome, 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -183,29 +201,22 @@ body {
     .form__input:focus:invalid {
       border-bottom: 4px solid orangered; }
     .form__input--text {
-      flex: 0 0 100%; }
+      width: 100%; }
     @media (max-width: 50em) {
       .form__input {
-        width: 80%; } }
+        width: 80%;
+        align-self: center; } }
   .form__label {
-    flex: 0 0 50%;
+    width: 100%;
     color: #fff;
     font-size: 2rem;
     font-weight: 100;
     border: 2px solid transparent; }
-    .form__label:nth-of-type(2) {
-      padding-left: 2.5rem; }
-      @media (max-width: 87.5em) {
-        .form__label:nth-of-type(2) {
-          padding-left: 1.5rem; } }
-      @media (max-width: 62.5em) {
-        .form__label:nth-of-type(2) {
-          padding-left: .5rem; } }
     @media (max-width: 50em) {
       .form__label {
         display: none; } }
     .form__label--text {
-      flex: 0 0 100%; }
+      width: 100%; }
   .form__btn {
     font-size: 2rem;
     font-family: inherit;
