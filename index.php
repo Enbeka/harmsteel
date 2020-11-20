@@ -76,19 +76,20 @@
         <form method="post" class="form">
             <div class="form__wrap">
                 <div class="form__wrap-col1">
-                    <label for="name" class="form__label">Imię i nazwisko</label>
                     <input type="text" class="form__input" placeholder="&#xf007   Imię i nazwisko" name="name" id="name" required>
+                    <label for="name" class="form__label">Imię i nazwisko</label>
                 </div>
                 <div class="form__wrap-col2">
-                    <label for="email" class="form__label">Adres e-mail</label>
                     <input type="email" class="form__input" placeholder="&#xf0e0   Twój adres e-mail" name="email" id="email" required>
+                    <label for="email" class="form__label">Adres e-mail</label>
                 </div>
                 <div class="form__wrap-area">
-                <label for="message" class="form__label form__label--text">Treść wiadomości</label>
-                <textarea name="area" class="form__input form__input--text" id="message" cols="25" rows="6" placeholder="&#xf5ad   Treść wiadomości" required></textarea>
+                    <textarea name="area" class="form__input form__input--text" id="message" cols="25" rows="6" placeholder="&#xf5ad   Treść wiadomości" required></textarea>
+                    <!-- <label for="message" class="form__label form__label--text">Treść wiadomości</label> -->
                 </div>
+                <input class="form__btn" type="submit" value="Wyślij">
             </div>
-            <input class="form__btn" type="submit" value="Wyślij">
+            
             <?php
                 if (isset($_REQUEST['email']))  {
                 
